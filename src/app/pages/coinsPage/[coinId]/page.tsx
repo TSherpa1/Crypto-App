@@ -14,6 +14,7 @@ const Coin = ({ params }: { params: { coinId: string } }) => {
   // }, []);
   const singleCoinDataObj = useAppSelector((state) => state.singleCoin);
   const singleCoinData = singleCoinDataObj.data;
+
   return <div>{params.coinId}</div>;
 };
 

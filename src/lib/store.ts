@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import coinListReducer from "./features/coinListSlice";
 import bitcoinReducer from "./features/bitcoinSlice";
 import singleCoinReducer from "./features/singleCoinSlice";
+import marketDataReducer from "./features/marketSlice";
 
 export const makeStore = () => {
   return configureStore({
@@ -9,6 +10,7 @@ export const makeStore = () => {
       coinList: coinListReducer,
       bitcoin: bitcoinReducer,
       singleCoin: singleCoinReducer,
+      marketData: marketDataReducer,
     },
   });
 };
