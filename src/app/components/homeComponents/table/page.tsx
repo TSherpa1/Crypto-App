@@ -7,9 +7,9 @@ const Table = () => {
   useEffect(() => {
     dispatch(fetchCoinList());
   }, []);
-  const coinListData = useAppSelector((state) => state.coinList);
-  const coinList = coinListData.data;
-  const firstTenCoins = coinList.slice(0, 10);
+  const coinListDataObj = useAppSelector((state) => state.coinList);
+  const coinListData = coinListDataObj.data;
+  const firstTenCoins = coinListData.slice(0, 10);
   return <div>Table</div>;
 };
 

@@ -1,12 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { exampleReducer } from "./features/example";
 import coinListReducer from "./features/coinListSlice";
+import bitcoinReducer from "./features/bitcoinSlice";
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
-      example: exampleReducer,
       coinList: coinListReducer,
+      bitcoin: bitcoinReducer,
     },
   });
 };
