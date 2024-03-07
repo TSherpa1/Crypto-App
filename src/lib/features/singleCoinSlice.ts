@@ -8,14 +8,6 @@ export const fetchSingleCoin = createAsyncThunk("getSingleCoin", async () => {
   return data;
 });
 
-//thunk to be used later when actually grabbing specific coins
-// export const fetchSingleCoin = createAsyncThunk("getSingleCoin", async (id) => {
-//   const { data } = await axios(
-// `https://api.coingecko.com/api/v3/coins/${id}?localization=false&tickers=false&market_data=true&community_data=true&developer_data=false&sparkline=false`
-//   );
-//   return data;
-// });
-
 interface SingleCoinState {
   data: {};
   status: "pending" | "succeeded" | "failed";

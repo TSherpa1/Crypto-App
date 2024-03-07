@@ -9,12 +9,8 @@ const Coin = ({ params }: { params: { coinId: string } }) => {
   useEffect(() => {
     dispatch(fetchSingleCoin());
   }, []);
-  // useEffect(() => {
-  //   dispatch(fetchSingleCoin(params.coinId));
-  // }, []);
   const singleCoinDataObj = useAppSelector((state) => state.singleCoin);
   const singleCoinData = singleCoinDataObj.data;
-
   return <div>{params.coinId}</div>;
 };
 
