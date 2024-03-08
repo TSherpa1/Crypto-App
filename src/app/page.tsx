@@ -1,10 +1,12 @@
 "use client";
-import StoreProvider from "./StoreProvider";
+import Table from "./components/homeComponents/table/page";
+import Charts from "./components/homeComponents/charts/page";
 
 export default function Home() {
   return (
-    <StoreProvider>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24 "></main>
-    </StoreProvider>
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 ">
+      <Charts />
+      {/* <Table /> */}
+    </main>
   );
 }
