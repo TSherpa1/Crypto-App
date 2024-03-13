@@ -19,7 +19,7 @@ const initialState: MarketDataState = {
 };
 
 export const marketDataSlice = createSlice({
-  name: "bitcoin",
+  name: "marketData",
   initialState,
   reducers: {},
   extraReducers(builder) {
