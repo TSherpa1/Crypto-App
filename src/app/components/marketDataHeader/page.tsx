@@ -9,21 +9,22 @@ const MarketDataHeader = () => {
   useEffect(() => {
     dispatch(fetchMarketData());
   }, []);
-  const marketDataObj = useAppSelector((state) => state.marketData.data);
-  const marketData = marketDataObj.data;
+
+  const marketData = useAppSelector((state) => state.marketData.data);
+  const { data } = marketData;
   return (
     <div>
-      {marketData ? (
-        <>
-          <p>Coins {marketData.active_cryptocurrencies}</p>
-          <p>Exchange {marketData.markets}</p>
-          <p>{convertNumber(marketData.total_volume.btc)}</p>
-          <p>{convertNumber(marketData.total_market_cap.btc)}</p>
-          <p>{convertToPercent(marketData.market_cap_percentage.btc)}</p>
-          <p>{convertToPercent(marketData.market_cap_percentage.eth)}</p>
-        </>
+      {!data ? (
+        <p>Loading...</p>
       ) : (
-        <p>loading...</p>
+        <>
+          <p>Coins {data.active_cryptocurrencies}</p>
+          <p>Exchange {data.markets}</p>
+          <p>{convertNumber(data.total_volume.btc)}</p>
+          <p>{convertNumber(data.total_market_cap.btc)}</p>
+          <p>{convertToPercent(data.market_cap_percentage.btc)}</p>
+          <p>{convertToPercent(data.market_cap_percentage.eth)}</p>
+        </>
       )}
     </div>
   );
