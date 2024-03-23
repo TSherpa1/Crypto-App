@@ -15,16 +15,13 @@ import {
 } from "../../../../public/marketDataSVGS";
 
 const MarketDataHeader = () => {
-  console.log("component ran");
   const dispatch = useAppDispatch();
   useEffect(() => {
-    console.log("useEffect ran");
     dispatch(fetchMarketData());
   }, []);
 
   const marketData = useAppSelector((state) => state.marketData.data);
   const { data } = marketData;
-  console.log(data);
   return (
     <div className="market-data-container flex bg-lightIndigo w-full justify-center items-center py-5 ">
       {!data ? (
