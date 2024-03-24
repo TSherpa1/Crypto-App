@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navigation() {
   return (
-    <div className="navigation-container flex p-20 text-white justify-between items-center w-full">
+    <div className="navigation-container flex p-20 text-white justify-between items-center">
       <div className="nav-logo-container flex gap-3 relative right-4">
         <svg
           width="36"

@@ -8,8 +8,8 @@ const config: Config = {
   ],
   theme: {
     colors: {
-      main: "#14121b",
-      lightIndigo: "#232238",
+      main: " #13121A",
+      lightIndigo: "#1E1932",
       fadedIndigo: "#3c3c83",
       darkIndigo: "#181826",
     },
@@ -18,6 +18,9 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      fontFamily: {
+        "space-grotesk": ["Space Grotesk", "sans-serif"],
       },
     },
   },
