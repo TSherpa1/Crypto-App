@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Navigation from "./components/navigation/page";
 import MarketDataHeader from "./components/marketDataHeader/page";
+import CurrencySelector from "./components/homeComponents/currencySelector/page";
 import StoreProvider from "./StoreProvider";
 import "./globals.css";
 
@@ -19,6 +20,7 @@ export default function RootLayout({
         <StoreProvider>
           <MarketDataHeader />
           <Navigation />
+          <CurrencySelector />
           {children}
         </StoreProvider>
       </body>
