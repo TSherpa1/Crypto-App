@@ -12,6 +12,7 @@ const config: Config = {
       lightIndigo: "#1E1932",
       fadedIndigo: "#3c3c83",
       darkIndigo: "#181826",
+      grey: "#A7A4A4",
     },
     extend: {
       backgroundImage: {
