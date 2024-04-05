@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { useAppDispatch } from "@/lib/hooks";
 
 interface Coin {
   id: string;
@@ -10,9 +11,18 @@ interface Coin {
 }
 
 const CurrencyDiv = ({ coin }: { coin: Coin }) => {
+  const dispatch = useAppDispatch();
+
+  const handleClick = () => {
+    //not made yet
+    // dispatch(setSingleCoin(coin.id));
+  };
   return (
     <div className="px-2">
-      <div className="flex items-center justify-evenly bg-darkIndigo rounded-md p-5 gap-3 cursor-pointer hover:bg-fadedIndigo">
+      <div
+        className="flex items-center justify-evenly bg-darkIndigo rounded-md p-5 gap-3 cursor-pointer hover:bg-fadedIndigo"
+        onClick={handleClick}
+      >
         <div>
           <Image src={coin.image} alt="" width="35" height="35" />
         </div>

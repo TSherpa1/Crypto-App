@@ -1,6 +1,6 @@
 import { NextPrevBtnSVG } from "../../../../../../public/currencySelectorSVGS";
 
-export const PrevArrow = (onClick: () => void) => (
+export const PrevArrow = ({ onClick }: { onClick: () => void }) => (
   <button
     className="z-20 rotate-180 absolute transform -translate-y-1/2"
     onClick={onClick}
@@ -10,7 +10,7 @@ export const PrevArrow = (onClick: () => void) => (
   </button>
 );
 
-export const NextArrow = (onClick: () => void) => (
+export const NextArrow = ({ onClick }: { onClick: () => void }) => (
   <button
     className="z-20  absolute transform -translate-y-1/2"
     onClick={onClick}
