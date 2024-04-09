@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { useAppDispatch } from "@/lib/hooks";
+import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+import { addCoin, removeCoin } from "@/lib/features/currentCoinsSlice";
 
 interface Coin {
   id: string;
@@ -11,16 +12,25 @@ interface Coin {
 }
 
 const CurrencyDiv = ({ coin }: { coin: Coin }) => {
+  const [highlighted, setHighlighted] = useState(false);
   const dispatch = useAppDispatch();
+  const selectedCoins = useAppSelector((state) => state.currentCoins.coins);
 
   const handleClick = () => {
-    //not made yet
-    // dispatch(setSingleCoin(coin.id));
+    if (!selectedCoins.includes(coin.id)) {
+      dispatch(addCoin(coin.id));
+    } else {
+      dispatch(removeCoin(coin.id));
+    }
+    setHighlighted(!highlighted);
   };
+
   return (
     <div className="px-2">
       <div
-        className="flex items-center justify-evenly bg-darkIndigo rounded-md p-5 gap-3 cursor-pointer hover:bg-fadedIndigo"
+        className={`flex items-center justify-evenly ${
+          highlighted ? "bg-fadedIndigo" : "bg-darkIndigo"
+        } rounded-md p-5 gap-3 cursor-pointer hover:bg-fadedIndigo`}
         onClick={handleClick}
       >
         <div>
