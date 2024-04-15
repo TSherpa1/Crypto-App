@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { addCoin, removeCoin } from "@/lib/features/currentCoinsSlice";
-
+import {
+  GreenArrowSVG,
+  RedArrowSVG,
+} from "../../../../../../public/currencySelectorSVGS";
 interface Coin {
   id: string;
   symbol: string;
@@ -45,9 +48,26 @@ const CurrencyDiv = ({ coin }: { coin: Coin }) => {
             <p className="text-grey">
               {Math.ceil(coin.current_price * 100) / 100} USD
             </p>
-            <p>
-              {Math.ceil(coin.market_cap_change_percentage_24h * 100) / 100}%
-            </p>
+
+            <div className="flex items-center content-center">
+              {coin.market_cap_change_percentage_24h < 0 ? (
+                <GreenArrowSVG />
+              ) : (
+                <RedArrowSVG />
+              )}
+              <p
+                className={
+                  coin.market_cap_change_percentage_24h < 0
+                    ? "text-green-500"
+                    : "text-red-500"
+                }
+              >
+                {Math.abs(
+                  Math.ceil(coin.market_cap_change_percentage_24h * 100) / 100
+                )}
+                %
+              </p>
+            </div>
           </div>
         </div>
       </div>

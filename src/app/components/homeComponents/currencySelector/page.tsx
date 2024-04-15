@@ -3,56 +3,24 @@ import React, { useEffect } from "react";
 import { useAppSelector, useAppDispatch } from "@/lib/hooks";
 import { fetchCoinList } from "@/lib/features/coinListSlice";
 import Slider from "react-slick";
-import CurrencyDiv from "./currencySelectorComponents/currencyDiv";
+import CurrencyDiv from "./currencySelectorComponents/CurrencyDiv";
 import {
   PrevArrow,
   NextArrow,
 } from "./currencySelectorComponents/SliderArrows";
 
 const CurrencySelector = () => {
+  //*This code below is commented out to avoid extra api calls, using the dummy data below it
+  //to render the currency div without having to make calls to coingecko
+
   // const dispatch = useAppDispatch();
   // useEffect(() => {
   //   dispatch(fetchCoinList());
-  // }, []);
+  // }, [dispatch]);
 
   // const coinListDataObj = useAppSelector((state) => state.coinList);
   // const coinListData = coinListDataObj.data || [];
   // const firstTenCoins = coinListData.slice(0, 10);
-
-  const settings = {
-    infinite: false,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 5,
-    initialSlide: 0,
-    swipeToSlide: true,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1400,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 878,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 0,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
 
   const firstTenCoins = [
     {
@@ -136,7 +104,49 @@ const CurrencySelector = () => {
         "https://assets.coingecko.com/coins/images/975/large/cardano.png?1696502090",
     },
   ];
-  // console.log(firstTenCoins);
+
+  const settings = {
+    infinite: false,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    initialSlide: 0,
+    swipeToSlide: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 878,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 0,
+        },
+      },
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <div className="flex flex-col items-center w-full ">
       <div className="w-full flex justify-start">

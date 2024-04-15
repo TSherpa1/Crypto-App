@@ -95,3 +95,37 @@ export const NextPrevBtnSVG = () => {
     </svg>
   );
 };
+
+export const GreenArrowSVG = () => {
+  return (
+    <svg
+      width="17"
+      height="16"
+      viewBox="0 0 17 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8.60026 6.33301L5.26693 9.66634H11.9336L8.60026 6.33301Z"
+        fill="#01F1E3"
+      />
+    </svg>
+  );
+};
+
+export const RedArrowSVG = () => {
+  return (
+    <svg
+      width="17"
+      height="16"
+      viewBox="0 0 17 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8.80013 9.66699L12.1335 6.33366L5.4668 6.33366L8.80013 9.66699Z"
+        fill="#FE2264"
+      />
+    </svg>
+  );
+};
