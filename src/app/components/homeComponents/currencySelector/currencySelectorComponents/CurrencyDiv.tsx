@@ -6,6 +6,7 @@ import {
   GreenArrowSVG,
   RedArrowSVG,
 } from "../../../../../../public/currencySelectorSVGS";
+
 interface Coin {
   id: string;
   symbol: string;
@@ -33,7 +34,7 @@ const CurrencyDiv = ({ coin }: { coin: Coin }) => {
       <div
         className={`flex items-center justify-evenly ${
           highlighted ? "bg-fadedIndigo" : "bg-darkIndigo"
-        } rounded-md p-5 gap-3 cursor-pointer hover:bg-fadedIndigo`}
+        } rounded-md p-5 gap-3 cursor-pointer`}
         onClick={handleClick}
       >
         <div>
@@ -48,7 +49,6 @@ const CurrencyDiv = ({ coin }: { coin: Coin }) => {
             <p className="text-grey">
               {Math.ceil(coin.current_price * 100) / 100} USD
             </p>
-
             <div className="flex items-center content-center">
               {coin.market_cap_change_percentage_24h < 0 ? (
                 <GreenArrowSVG />
