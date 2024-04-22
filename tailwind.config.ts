@@ -23,9 +23,6 @@ const config: Config = {
         darkIndigo: "#181826",
         grey: "#A7A4A4",
       },
-      spacing: {
-        "103": "103.5rem",
-      },
     },
   },
   plugins: [],
