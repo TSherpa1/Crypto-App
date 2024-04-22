@@ -3,16 +3,13 @@ import React, { useEffect } from "react";
 import { useAppSelector, useAppDispatch } from "@/lib/hooks";
 import { fetchCoinList } from "@/lib/features/coinListSlice";
 import Slider from "react-slick";
-import CurrencyDiv from "./currencySelectorComponents/CurrencyDiv";
+import Currency from "./currencySelectorComponents/Currency";
 import {
   PrevArrow,
   NextArrow,
 } from "./currencySelectorComponents/SliderArrows";
 
 const CurrencySelector = () => {
-  //*This code below is commented out to avoid extra api calls, using the dummy data below it
-  //to render the currency div without having to make calls to coingecko
-
   // const dispatch = useAppDispatch();
   // useEffect(() => {
   //   dispatch(fetchCoinList());
@@ -157,7 +154,7 @@ const CurrencySelector = () => {
       <div className="flex items-center gap-3 w-full ">
         <Slider {...settings} className="w-full">
           {firstTenCoins.map((coin) => (
-            <CurrencyDiv key={coin.id} coin={coin} />
+            <Currency key={coin.id} coin={coin} />
           ))}
         </Slider>
       </div>

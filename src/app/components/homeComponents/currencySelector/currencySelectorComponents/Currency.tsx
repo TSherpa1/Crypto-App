@@ -15,7 +15,7 @@ interface Coin {
   market_cap_change_percentage_24h: number;
 }
 
-const CurrencyDiv = ({ coin }: { coin: Coin }) => {
+const Currency = ({ coin }: { coin: Coin }) => {
   const [highlighted, setHighlighted] = useState(false);
   const dispatch = useAppDispatch();
   const selectedCoins = useAppSelector((state) => state.currentCoins.coins);
@@ -75,4 +75,4 @@ const CurrencyDiv = ({ coin }: { coin: Coin }) => {
   );
 };
 
-export default CurrencyDiv;
+export default Currency;
