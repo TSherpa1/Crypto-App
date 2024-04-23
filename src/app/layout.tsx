@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className=" bg-main">
+      <body className=" bg-main w-full">
         <StoreProvider>
           <MarketDataHeader />
           <Navigation />

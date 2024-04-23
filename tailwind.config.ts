@@ -7,12 +7,6 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      main: " #13121A",
-      lightIndigo: "#1E1932",
-      fadedIndigo: "#3c3c83",
-      darkIndigo: "#181826",
-    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -21,6 +15,13 @@ const config: Config = {
       },
       fontFamily: {
         "space-grotesk": ["Space Grotesk", "sans-serif"],
+      },
+      colors: {
+        main: " #13121A",
+        lightIndigo: "#1E1932",
+        fadedIndigo: "#3c3c83",
+        darkIndigo: "#181826",
+        grey: "#A7A4A4",
       },
     },
   },
