@@ -1,9 +1,19 @@
 import Link from "next/link";
+import {
+  LogoSVG,
+  HomeSVG,
+  PortfolioSVG,
+  SearchSVG,
+  CurrencySVG,
+  ArrowSVG,
+  DisplayModeSVG,
+} from "../../../../public/navbarSVGs";
 
 export default function Navigation() {
   return (
     <div className="navigation-container flex p-20 text-white justify-between items-center">
       <div className="nav-logo-container flex gap-3 relative right-4">
+        {/* <LogoSVG /> */}
         <svg
           width="36"
           height="20"
@@ -33,6 +43,7 @@ export default function Navigation() {
       </div>
       <div className="nav-links-container flex gap-14 relative right-14 text-sm">
         <Link className="flex gap-2" href="/">
+          {/* <HomeSVG /> */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -46,10 +57,11 @@ export default function Navigation() {
               strokeLinejoin="round"
               d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
             />
-          </svg>{" "}
+          </svg>
           Home
         </Link>
         <Link className="flex gap-2" href="/pages/portfolio">
+          {/* <PortfolioSVG /> */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -68,6 +80,7 @@ export default function Navigation() {
         </Link>
       </div>
       <div className="nav-search-button-container flex gap-3 w-2/5 h-11 relative right-32">
+        {/* <SearchSVG /> */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -88,6 +101,7 @@ export default function Navigation() {
           placeholder="Search..."
         />
         <button className="bg-darkIndigo p-3 text-xs rounded-md flex gap-2">
+          {/* <CurrencySVG /> */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -103,6 +117,7 @@ export default function Navigation() {
             />
           </svg>
           <p>USD</p>
+          {/* <ArrowSVG /> */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -119,6 +134,7 @@ export default function Navigation() {
           </svg>
         </button>
         <button className="bg-darkIndigo w-1/12  flex justify-center items-center rounded-lg">
+          {/* <DisplayModeSVG /> */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
