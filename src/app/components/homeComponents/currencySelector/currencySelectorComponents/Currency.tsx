@@ -5,7 +5,7 @@ import { addCoin, removeCoin } from "@/lib/features/currentCoinsSlice";
 import {
   GreenArrowSVG,
   RedArrowSVG,
-} from "../../../../../../public/currencySelectorSVGS";
+} from "../../../../../../public/currencySelectorSVGs";
 
 interface Coin {
   id: string;

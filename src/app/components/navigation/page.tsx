@@ -8,6 +8,7 @@ import {
   ArrowSVG,
   DisplayModeSVG,
 } from "../../../../public/navbarSVGs";
+import SearchBar from "./navigationComponents/searchBar";
 
 export default function Navigation() {
   return (
@@ -95,11 +96,7 @@ export default function Navigation() {
             d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
           />
         </svg>
-        <input
-          className="bg-darkIndigo relative rounded-md p-3 pl-12 w-8/12 text-sm"
-          type="text"
-          placeholder="Search..."
-        />
+        <SearchBar />
         <button className="bg-darkIndigo p-3 text-xs rounded-md flex gap-2">
           {/* <CurrencySVG /> */}
           <svg
