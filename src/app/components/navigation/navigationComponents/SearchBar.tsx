@@ -3,9 +3,17 @@ import { fetchCoinList } from "@/lib/features/coinListSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { ChangeEvent, useEffect, useState } from "react";
 import { coinList } from "../../../../../utils/coinList";
+import Dropdown from "./Dropdown";
+
+interface Coin {
+  name: string;
+  id: string;
+}
 
 const SearchBar = () => {
   const [coinInput, setCoinInput] = useState("");
+  const [filteredCoins, setFilteredCoins] = useState<Coin[]>([]);
+  const [displayDropdown, setDisplayDropdown] = useState(false);
 
   //   const dispatch = useAppDispatch();
   //   useEffect(() => {
@@ -20,20 +28,35 @@ const SearchBar = () => {
     id: coin.id,
   }));
 
-  console.log(coins);
-
+  const searchCoin = (coinInput: string) => {
+    const filter = coins.filter((coin) => {
+      return coin.name.toLowerCase().includes(coinInput.toLowerCase());
+    });
+    setFilteredCoins(filter);
+  };
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setCoinInput(event.target.value);
+    setDisplayDropdown(true);
+    const input = event.target.value;
+    setCoinInput(input);
+    searchCoin(input);
+  };
+
+  const handleBlur = () => {
+    setDisplayDropdown(false);
   };
 
   return (
-    <input
-      className="bg-darkIndigo relative rounded-md p-3 pl-12 w-8/12 text-sm"
-      type="text"
-      onChange={handleChange}
-      placeholder="Search..."
-      value={coinInput}
-    />
+    <div>
+      <input
+        className="bg-darkIndigo relative rounded-md p-3 pl-12 w-full text-sm"
+        type="text"
+        onChange={handleChange}
+        placeholder="Search..."
+        value={coinInput}
+        onBlur={handleBlur}
+      />
+      {displayDropdown ? <Dropdown filteredCoins={filteredCoins} /> : ""}
+    </div>
   );
 };
 

@@ -8,7 +8,7 @@ import {
   ArrowSVG,
   DisplayModeSVG,
 } from "../../../../public/navbarSVGs";
-import SearchBar from "./navigationComponents/searchBar";
+import SearchBar from "./navigationComponents/SearchBar";
 
 export default function Navigation() {
   return (

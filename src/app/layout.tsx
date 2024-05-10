@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Navigation from "./components/navigation/page";
-import MarketDataHeader from "./components/marketDataHeader/page";
+import Navigation from "./components/navigation/Navigation";
+import MarketDataHeader from "./components/marketDataHeader/MarketDataHeader";
 import StoreProvider from "./StoreProvider";
 import "./globals.css";
 
