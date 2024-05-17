@@ -1,20 +1,10 @@
 import Link from "next/link";
-import {
-  LogoSVG,
-  HomeSVG,
-  PortfolioSVG,
-  SearchSVG,
-  CurrencySVG,
-  ArrowSVG,
-  DisplayModeSVG,
-} from "../../../../public/navbarSVGs";
 import SearchBar from "./navigationComponents/SearchBar";
 
 export default function Navigation() {
   return (
     <div className="navigation-container flex p-20 text-white justify-between items-center">
       <div className="nav-logo-container flex gap-3 relative right-4">
-        {/* <LogoSVG /> */}
         <svg
           width="36"
           height="20"
@@ -44,7 +34,6 @@ export default function Navigation() {
       </div>
       <div className="nav-links-container flex gap-14 relative right-14 text-sm">
         <Link className="flex gap-2" href="/">
-          {/* <HomeSVG /> */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -62,7 +51,6 @@ export default function Navigation() {
           Home
         </Link>
         <Link className="flex gap-2" href="/pages/portfolio">
-          {/* <PortfolioSVG /> */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -81,7 +69,6 @@ export default function Navigation() {
         </Link>
       </div>
       <div className="nav-search-button-container flex gap-3 w-2/5 h-11 relative right-32">
-        {/* <SearchSVG /> */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -98,7 +85,6 @@ export default function Navigation() {
         </svg>
         <SearchBar />
         <button className="bg-darkIndigo p-3 text-xs rounded-md flex gap-2">
-          {/* <CurrencySVG /> */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -114,7 +100,6 @@ export default function Navigation() {
             />
           </svg>
           <p>USD</p>
-          {/* <ArrowSVG /> */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -131,7 +116,6 @@ export default function Navigation() {
           </svg>
         </button>
         <button className="bg-darkIndigo w-1/12  flex justify-center items-center rounded-lg">
-          {/* <DisplayModeSVG /> */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
