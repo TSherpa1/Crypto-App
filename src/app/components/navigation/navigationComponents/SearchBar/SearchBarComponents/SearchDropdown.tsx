@@ -7,7 +7,7 @@ interface Coin {
   id: string;
 }
 
-const Dropdown = ({ filteredCoins }: { filteredCoins: Coin[] }) => {
+const SearchDropdown = ({ filteredCoins }: { filteredCoins: Coin[] }) => {
   return (
     <>
       {filteredCoins.length !== 0 && (
@@ -22,4 +22,4 @@ const Dropdown = ({ filteredCoins }: { filteredCoins: Coin[] }) => {
     </>
   );
 };
-export default Dropdown;
+export default SearchDropdown;

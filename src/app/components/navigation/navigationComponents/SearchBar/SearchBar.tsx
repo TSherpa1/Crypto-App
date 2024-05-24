@@ -2,8 +2,8 @@
 import { fetchCoinList } from "@/lib/features/coinListSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { ChangeEvent, useEffect, useState } from "react";
-import { coinList } from "../../../../../utils/coinList";
-import Dropdown from "./Dropdown";
+import { coinList } from "../../../../../../utils/coinList";
+import SearchDropdown from "./SearchBarComponents/SearchDropdown";
 
 interface Coin {
   name: string;
@@ -55,7 +55,7 @@ const SearchBar = () => {
         value={coinInput}
         onBlur={handleBlur}
       />
-      {displayDropdown ? <Dropdown filteredCoins={filteredCoins} /> : ""}
+      {displayDropdown ? <SearchDropdown filteredCoins={filteredCoins} /> : ""}
     </div>
   );
 };
