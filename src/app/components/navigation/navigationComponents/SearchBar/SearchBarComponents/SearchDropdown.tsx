@@ -11,10 +11,10 @@ const SearchDropdown = ({ filteredCoins }: { filteredCoins: Coin[] }) => {
   return (
     <>
       {filteredCoins.length !== 0 && (
-        <div className="flex flex-col bg-darkIndigo my-1 pd-px rounded-md max-h-52 overflow-hidden overflow-y-auto">
+        <div className="flex flex-col bg-darkIndigo my-1 pd-px max-h-52 rounded-md overflow-hidden overflow-y-scroll ml-8">
           {filteredCoins.map((coin) => (
             <Link href={`/pages/coinsPage/${coin.id}`} key={coin.id}>
-              <p className="p-4 hover:bg-fadedIndigo">{coin.name}</p>
+              <p className="p-4 hover:bg-fadedIndigo rounded-md">{coin.name}</p>
             </Link>
           ))}
         </div>
