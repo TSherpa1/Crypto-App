@@ -1,4 +1,9 @@
-const CurrencySelectorBtn = ({ currency, toggleDropdown }) => {
+import { CurrencySelectorBtnProps } from "../types";
+
+const CurrencySelectorBtn: React.FC<CurrencySelectorBtnProps> = ({
+  currency,
+  toggleDropdown,
+}) => {
   return (
     <button
       className="bg-darkIndigo p-2.5 text-xs rounded-md flex items-center gap-2 w-full"

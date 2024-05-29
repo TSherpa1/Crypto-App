@@ -3,6 +3,7 @@ import { useState } from "react";
 import CurrencyDropdown from "./currencySelectorComponents/CurrencyDropdown";
 import CurrencySelectorBtn from "./currencySelectorComponents/CurrencySelectorBtn";
 import { currencies } from "../../../../../../utils/currencyList";
+import { Currency } from "./types";
 
 const CurrencySelector = () => {
   //need to grab the currentCurrency from the redux store and make that the initial state
@@ -13,7 +14,7 @@ const CurrencySelector = () => {
     setShowDropdown(!showDropdown);
   };
 
-  const setCurrency = (selectedCurrency) => {
+  const setCurrency = (selectedCurrency: Currency) => {
     const currency = currencies.filter(
       (currency) => currency.name === selectedCurrency.name
     );

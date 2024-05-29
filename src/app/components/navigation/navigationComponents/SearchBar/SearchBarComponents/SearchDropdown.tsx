@@ -1,11 +1,7 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-
-interface Coin {
-  name: string;
-  id: string;
-}
+import { Coin } from "../types";
 
 const SearchDropdown = ({ filteredCoins }: { filteredCoins: Coin[] }) => {
   return (

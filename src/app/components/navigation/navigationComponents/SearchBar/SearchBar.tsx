@@ -1,14 +1,9 @@
 "use client";
 import { fetchCoinList } from "@/lib/features/coinListSlice";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { coinList } from "../../../../../../utils/coinList";
 import SearchDropdown from "./SearchBarComponents/SearchDropdown";
-
-interface Coin {
-  name: string;
-  id: string;
-}
 
 const SearchBar = () => {
   const [coinInput, setCoinInput] = useState("");
