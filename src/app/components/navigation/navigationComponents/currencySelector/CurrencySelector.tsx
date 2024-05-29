@@ -5,7 +5,7 @@ import CurrencySelectorBtn from "./currencySelectorComponents/CurrencySelectorBt
 import { currencies } from "../../../../../../utils/currencyList";
 
 const CurrencySelector = () => {
-  //need to grab the currentCurrency from the redux store and make that the
+  //need to grab the currentCurrency from the redux store and make that the initial state
   const [currentCurrency, setCurrentCurrency] = useState(currencies[0]);
   const [showDropdown, setShowDropdown] = useState(false);
 
@@ -23,7 +23,7 @@ const CurrencySelector = () => {
   };
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center h-full">
       <CurrencySelectorBtn
         currency={currentCurrency}
         toggleDropdown={toggleDropdown}

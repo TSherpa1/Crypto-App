@@ -15,7 +15,7 @@ export default function Navigation() {
         <HomeLink />
         <PortfolioLink />
       </div>
-      <div className="nav-search-button-container flex gap-3 w-2/5 h-11 relative right-32">
+      <div className="nav-search-button-container flex items-center gap-3 w-2/5 h-11 relative right-32">
         <SearchBar />
         <CurrencySelector />
         <ThemeSelector />

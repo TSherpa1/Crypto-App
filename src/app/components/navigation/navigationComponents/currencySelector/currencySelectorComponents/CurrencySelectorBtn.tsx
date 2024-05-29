@@ -1,7 +1,7 @@
 const CurrencySelectorBtn = ({ currency, toggleDropdown }) => {
   return (
     <button
-      className="bg-darkIndigo p-3 text-xs rounded-md flex items-center gap-2 w-full"
+      className="bg-darkIndigo p-2.5 text-xs rounded-md flex items-center gap-2 w-full"
       onClick={toggleDropdown}
     >
       {currency.currencySVG}

@@ -46,7 +46,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full h-full">
       <div className="flex gap-4 w-full">
         <svg
           xmlns="http://www.w3.org/2000/svg"
