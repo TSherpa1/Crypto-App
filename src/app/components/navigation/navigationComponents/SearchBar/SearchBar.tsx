@@ -1,6 +1,6 @@
 "use client";
 import { fetchCoinList } from "@/lib/features/coinListSlice";
-import { useAppDispatch, useAppSelector, useEf } from "@/lib/hooks";
+import { useAppDispatch, useAppSelector, useEffect } from "@/lib/hooks";
 import { ChangeEvent, useState } from "react";
 import { coinList } from "../../../../../../utils/coinList";
 import SearchDropdown from "./SearchBarComponents/SearchDropdown";
