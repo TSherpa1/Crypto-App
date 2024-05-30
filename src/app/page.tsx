@@ -1,7 +1,5 @@
 "use client";
-import Table from "./components/homeComponents/table/page";
-import Charts from "./components/homeComponents/charts/page";
-import CurrencySelector from "./components/homeComponents/currencySelector/page";
+import CurrencySelector from "./components/homeComponents/currencySelector/CurrencySelector";
 
 export default function Home() {
   return (
