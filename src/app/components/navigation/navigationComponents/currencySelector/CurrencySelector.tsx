@@ -29,14 +29,12 @@ const CurrencySelector = () => {
         currency={currentCurrency}
         toggleDropdown={toggleDropdown}
       />
-      {showDropdown ? (
+      {showDropdown && (
         <CurrencyDropdown
           currencies={currencies}
           setCurrency={setCurrency}
           toggleDropdown={toggleDropdown}
         />
-      ) : (
-        ""
       )}
     </div>
   );

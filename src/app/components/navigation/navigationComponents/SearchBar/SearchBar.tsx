@@ -1,19 +1,21 @@
 "use client";
 import { fetchCoinList } from "@/lib/features/coinListSlice";
-import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+import { useAppDispatch, useAppSelector, useEf } from "@/lib/hooks";
 import { ChangeEvent, useState } from "react";
 import { coinList } from "../../../../../../utils/coinList";
 import SearchDropdown from "./SearchBarComponents/SearchDropdown";
+import { Coin } from "./types";
 
 const SearchBar = () => {
   const [coinInput, setCoinInput] = useState("");
   const [filteredCoins, setFilteredCoins] = useState<Coin[]>([]);
   const [displayDropdown, setDisplayDropdown] = useState(false);
 
+  //   code not being used at the moment for the sake of avoiding api call limit, using a seperate file
+  //   with dummy data that isn't live
   //   const dispatch = useAppDispatch();
   //   useEffect(() => {
   //     dispatch(fetchCoinList());
-  //     console.log("running");
   //   }, []);
 
   //   const coinList = useAppSelector((state) => state.coinList.data);
@@ -66,7 +68,7 @@ const SearchBar = () => {
           onBlur={handleBlur}
         />
       </div>
-      {displayDropdown ? <SearchDropdown filteredCoins={filteredCoins} /> : ""}
+      {displayDropdown && <SearchDropdown filteredCoins={filteredCoins} />}
     </div>
   );
 };
