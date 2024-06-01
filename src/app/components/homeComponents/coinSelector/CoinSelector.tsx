@@ -3,13 +3,10 @@ import React, { useEffect } from "react";
 import { useAppSelector, useAppDispatch } from "@/lib/hooks";
 import { fetchCoinList } from "@/lib/features/coinListSlice";
 import Slider from "react-slick";
-import Currency from "./currencySelectorComponents/Currency";
-import {
-  PrevArrow,
-  NextArrow,
-} from "./currencySelectorComponents/SliderArrows";
+import CoinCard from "./coinSelectorComponents/CoinCard";
+import { PrevArrow, NextArrow } from "./coinSelectorComponents/SliderArrows";
 
-const CurrencySelector = () => {
+const CoinSelector = () => {
   // const dispatch = useAppDispatch();
   // useEffect(() => {
   //   dispatch(fetchCoinList());
@@ -154,7 +151,7 @@ const CurrencySelector = () => {
       <div className="flex items-center gap-3 w-full ">
         <Slider {...settings} className="w-full">
           {firstTenCoins.map((coin) => (
-            <Currency key={coin.id} coin={coin} />
+            <CoinCard key={coin.id} coin={coin} />
           ))}
         </Slider>
       </div>
@@ -162,4 +159,4 @@ const CurrencySelector = () => {
   );
 };
 
-export default CurrencySelector;
+export default CoinSelector;

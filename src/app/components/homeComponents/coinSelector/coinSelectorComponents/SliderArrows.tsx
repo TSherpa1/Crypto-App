@@ -1,4 +1,4 @@
-import { NextPrevBtnSVG } from "../../../../../../public/currencySelectorSVGs";
+import { NextPrevBtnSVG } from "../../../../../../public/coinSelectorSVGs";
 
 export const PrevArrow = ({ onClick }: { onClick: () => void }) => (
   <button

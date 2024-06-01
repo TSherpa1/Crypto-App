@@ -5,7 +5,7 @@ import { addCoin, removeCoin } from "@/lib/features/currentCoinsSlice";
 import {
   GreenArrowSVG,
   RedArrowSVG,
-} from "../../../../../../public/currencySelectorSVGs";
+} from "../../../../../../public/coinSelectorSVGs";
 
 interface Coin {
   id: string;
@@ -15,7 +15,7 @@ interface Coin {
   market_cap_change_percentage_24h: number;
 }
 
-const Currency = ({ coin }: { coin: Coin }) => {
+const CoinCard = ({ coin }: { coin: Coin }) => {
   const [highlighted, setHighlighted] = useState(false);
   const dispatch = useAppDispatch();
   const selectedCoins = useAppSelector((state) => state.currentCoins.coins);
@@ -75,4 +75,4 @@ const Currency = ({ coin }: { coin: Coin }) => {
   );
 };
 
-export default Currency;
+export default CoinCard;
