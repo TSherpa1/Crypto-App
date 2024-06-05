@@ -1,3 +1,4 @@
+import React from "react";
 import { CurrencySelectorBtnProps } from "../types";
 
 const CurrencySelectorBtn: React.FC<CurrencySelectorBtnProps> = ({
