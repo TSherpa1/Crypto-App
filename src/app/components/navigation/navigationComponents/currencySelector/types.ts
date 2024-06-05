@@ -1,10 +1,9 @@
 export interface Currency {
   name: string;
-  currencySVG: React.ReactNode;
+  currencySVG?: React.ReactNode;
 }
 
 export interface CurrencyDropdownProps {
-  currencies: Currency[];
   setCurrency: (currency: Currency) => void;
   toggleDropdown: () => void;
 }
