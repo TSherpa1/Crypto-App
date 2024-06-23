@@ -12,12 +12,11 @@ export const coinsConverterSlice = createSlice({
   name: "CoinsConverter",
   initialState,
   reducers: {
-    toggleView: (state) => {
-      state.currentView =
-        state.currentView === "converter" ? "coins" : "converter";
+    setView: (state, action) => {
+      state.currentView = action.payload;
     },
   },
 });
 
-export const { toggleView } = coinsConverterSlice.actions;
+export const { setView } = coinsConverterSlice.actions;
 export default coinsConverterSlice.reducer;
