@@ -4,6 +4,7 @@ import bitcoinReducer from "./features/bitcoinSlice";
 import singleCoinReducer from "./features/singleCoinSlice";
 import marketDataReducer from "./features/marketSlice";
 import currentCoinsReducer from "./features/currentCoinsSlice";
+import coinsConverterReducer from "./features/coinsConverterSlice";
 
 export const makeStore = () => {
   return configureStore({
@@ -13,6 +14,7 @@ export const makeStore = () => {
       singleCoin: singleCoinReducer,
       marketData: marketDataReducer,
       currentCoins: currentCoinsReducer,
+      coinsConverter: coinsConverterReducer,
     },
   });
 };
