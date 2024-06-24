@@ -9,7 +9,7 @@ import {
 
 export default function Navigation() {
   return (
-    <div className="navigation-container flex p-20 text-white justify-between items-center">
+    <div className="navigation-container flex p-20 pb-5 text-white justify-between items-center">
       <Logo />
       <div className="nav-links-container flex gap-14 relative right-14 text-sm">
         <HomeLink />
