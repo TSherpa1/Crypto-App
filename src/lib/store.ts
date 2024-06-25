@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+
 import {
   coinListReducer,
   bitcoinReducer,
@@ -6,6 +7,7 @@ import {
   marketDataReducer,
   currentCoinsReducer,
   currentCurrencyReducer,
+  coinsConverterReducer,
 } from "./features";
 
 export const makeStore = () => {
@@ -16,6 +18,7 @@ export const makeStore = () => {
       singleCoin: singleCoinReducer,
       marketData: marketDataReducer,
       currentCoins: currentCoinsReducer,
+      coinsConverter: coinsConverterReducer,
       currentCurrency: currentCurrencyReducer,
     },
   });
