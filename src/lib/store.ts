@@ -1,10 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
-import coinListReducer from "./features/coinListSlice";
-import bitcoinReducer from "./features/bitcoinSlice";
-import singleCoinReducer from "./features/singleCoinSlice";
-import marketDataReducer from "./features/marketSlice";
-import currentCoinsReducer from "./features/currentCoinsSlice";
-import coinsConverterReducer from "./features/coinsConverterSlice";
+
+import {
+  coinListReducer,
+  bitcoinReducer,
+  singleCoinReducer,
+  marketDataReducer,
+  currentCoinsReducer,
+  currentCurrencyReducer,
+  coinsConverterReducer,
+} from "./features";
 
 export const makeStore = () => {
   return configureStore({
@@ -15,6 +19,7 @@ export const makeStore = () => {
       marketData: marketDataReducer,
       currentCoins: currentCoinsReducer,
       coinsConverter: coinsConverterReducer,
+      currentCurrency: currentCurrencyReducer,
     },
   });
 };
