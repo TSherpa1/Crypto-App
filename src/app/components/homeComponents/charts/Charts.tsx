@@ -9,7 +9,12 @@ function Charts() {
   }, []);
   const bitcoinDataObj = useAppSelector((state) => state.bitcoin);
   const bitcoinData = bitcoinDataObj.data;
-  return <div>Charts</div>;
+  return (
+    <div>
+      <div>Chart 1</div>
+      <div>Chart 2</div>
+    </div>
+  );
 }
 
 export default Charts;
