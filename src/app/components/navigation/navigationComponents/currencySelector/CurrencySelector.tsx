@@ -27,7 +27,6 @@ const CurrencySelector = () => {
     return currencies.find((currency) => currency.name === name);
   };
 
-  console.log(currentCurrency.name);
   const selectedCurrency = findCurrencyByName(currentCurrency.name);
 
   return (
