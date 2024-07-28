@@ -20,9 +20,26 @@ ChartJS.register(
   Tooltip,
   Legend
 );
+// export const LineGraph = () => {
+//   const options = {
+//     // responsive: true,
+//     plugins: {
+//       legend: {
+//         position: "top",
+//       },
+//       title: {
+//         display: true,
+//         text: "Bitcoin Price Data",
+//       },
+//     },
+//   };
+//   console.log("LineGraph data:", bitcoinPriceChartData);
+
+//   return <Line options={options} data={bitcoinPriceChartData} />;
+// };
+
 export const LineGraph = () => {
   const options = {
-    // responsive: true,
     plugins: {
       legend: {
         position: "top",
@@ -33,6 +50,8 @@ export const LineGraph = () => {
       },
     },
   };
-  console.log("this is the data localStorage", bitcoinPriceChartData);
+
+  console.log("LineGraph data:", bitcoinPriceChartData);
+
   return <Line options={options} data={bitcoinPriceChartData} />;
 };

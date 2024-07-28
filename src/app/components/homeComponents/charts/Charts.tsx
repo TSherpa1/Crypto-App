@@ -27,8 +27,16 @@ const Charts = () => {
   const time = bitcoinPriceData.map((priceData) => priceData[0]) || [];
   const price = bitcoinPriceData.map((priceData) => priceData[1]) || [];
 
-  console.log(bitcoinPriceChartData);
-  console.log(price);
+  // console.log(bitcoinPriceChartData);
+  // console.log(price);
+
+  console.log("Charts time:", time);
+  console.log("Charts price:", price);
+
+  useEffect(() => {
+    console.log("After rendering LineGraph - time:", time);
+    console.log("After rendering LineGraph - price:", price);
+  }, []);
 
   return (
     <div>
